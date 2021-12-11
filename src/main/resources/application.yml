@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: gateway
+  zipkin:
+    base-url: http://172.30.8.74:9411/
+  sleuth:
+    sampler:
+      # 抽样率,默认是0.1 (10%)
+      probability: 1.0
   cloud:
     nacos:
       discovery:
